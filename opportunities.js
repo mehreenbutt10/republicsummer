@@ -1,4 +1,4 @@
-var savedProgram = $('.fa-heart');
+var savedProgram = $('.far');
 var cardContainer = $('.card-container');
 var allPrograms = JSON.parse(localStorage.getItem('programs')) || [];
 
@@ -10,10 +10,10 @@ function appendAllPrograms() {
       <p class="new-opp-card">${program}
       <button type="button" class="btn btn-dark complete">Complete</button>
       </p>
-      `)
+      `);
   })
 }
-appendAllPrograms;
+appendAllPrograms();
 
 savedProgram.on("click", appendNewProgram);
 
@@ -41,8 +41,8 @@ function completedApp(event) {
   var programToDelete = event.target.parentNode.children[0].textContent;
   var indexToDelete = allPrograms.indexOf(programToDelete);
   allPrograms.splice(indexToDelete, 1);
-  var ProgramString = JSON.stringify(allPrograms);
-  localStorage.setItem('programs',programString);
+  var programString = JSON.stringify(allPrograms);
+  localStorage.setItem('programs', programString);
 
   event.target.parentNode.remove()
 }
