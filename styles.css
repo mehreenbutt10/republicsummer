@@ -1,0 +1,10 @@
+h1 {
+  text-align: center;
+  padding-top: 220px;
+  letter-spacing: 4px;
+  font-size: 150px;
+}
+
+#deadlinepassed {
+  opacity: 0.3;
+}
